@@ -1,4 +1,5 @@
 from simple_blogger import SimpleBlogger
+from datetime import datetime
 
 class Project(SimpleBlogger):
     def __init__(self, **kwargs):
@@ -7,6 +8,7 @@ class Project(SimpleBlogger):
             text_ai_token_name='OPENAI_API_KEY',
             ai_text_model='chatgpt-4o-latest',
             text_base_url='https://api.openai.com/v1',
+            first_post_date=datetime(2025, 3, 3),
             **kwargs)
 
     def _task_converter(self, item):
