@@ -6,6 +6,8 @@ class Project(Journalist):
         super().__init__(            
             review_chat_id=-1002374309134,
             first_post_date=datetime(2025, 3, 4),
+            send_text_with_image=True,
+            topic_word_limit=100,
             **kwargs)
 
     def _task_converter(self, item):
