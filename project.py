@@ -8,7 +8,7 @@ class Project(Journalist):
         super().__init__(            
             first_post_date=datetime(2025, 3, 4),
             reviewer=TelegramSender(),
-            senders=[TelegramSender(channel_id=f"@lus_nexus"), InstagramSender(channel_token_name='LUX_NEXUS_TOKEN')],
+            senders=[TelegramSender(channel_id=f"@lux_nexus"), InstagramSender(channel_token_name='LUX_NEXUS_TOKEN')],
             topic_word_limit=100,
             **kwargs)
 
