@@ -1,12 +1,14 @@
 from simple_blogger import Journalist
 from datetime import datetime
+from simple_blogger.senders.TelegramSender import TelegramSender
+from simple_blogger.senders.InstagramSender import InstagramSender
 
 class Project(Journalist):
     def __init__(self, **kwargs):
         super().__init__(            
-            review_chat_id=-1002374309134,
             first_post_date=datetime(2025, 3, 4),
-            send_text_with_image=True,
+            reviewer=TelegramSender(),
+            senders=[TelegramSender(channel_id=f"@cats_and_beasts"), InstagramSender(channel_token_name='CATS_AND_BEASTS_TOKEN')],
             topic_word_limit=100,
             **kwargs)
 
